@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import com.teamdev.jxbrowser.chromium.javafx.BrowserView?>
+
+<?import javafx.scene.web.WebView?>
+<?import com.teamdev.jxbrowser.chromium.javafx.BrowserView?>
+<Tab fx:id="playTab" text="Play" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chronpwn.pokermavenshud.controller.PlayTabController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <SplitPane dividerPositions="0.22937625754527163" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane prefHeight="32.0" prefWidth="235.0">
+                                            <children>
+                                                <Label graphicTextGap="0.0" prefHeight="30.0" prefWidth="114.0" text="Players" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                                            </children>
+                                        </AnchorPane>
+                                        <ListView fx:id="playersList" onKeyReleased="#onEnterReleased" onMouseClicked="#onMouseClicked" prefHeight="246.0" prefWidth="235.0" VBox.vgrow="ALWAYS">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </ListView>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+
+
+                        <BrowserView fx:id="browserView" minHeight="0.0" minWidth="0.0" prefHeight="428.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+
+                        </BrowserView>
+
+
+                    </items>
+                </SplitPane>
+            </children>
+        </AnchorPane>
+    </content>
+</Tab>
